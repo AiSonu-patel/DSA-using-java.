@@ -19,7 +19,7 @@ public class RotatedArray {
         while(st <= end){
             int mid = st + (end - st)/2;
             if(arr[mid] <= arr[n-1]){
-                ans = mid;
+                ans = arr[mid];
                 end = mid - 1;
             } else {
                 st = mid + 1;

@@ -1,6 +1,4 @@
-/**
- * PrintAllSubstring
- */
+
 public class PrintAllSubstring {
 
     public static void main(String[] args) {

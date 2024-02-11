@@ -2,6 +2,14 @@
  * Basicsll
  */
 public class Basicsll {
+    public static void insertAtEnd(Node head, int val){
+        Node temp = new Node(val);
+        Node t = head;
+        while(t.next!=null){
+            t = t.next;
+        }
+        t.next = temp;
+    }
     public static void printUsRec(Node head){
         if(head == null){
             return;
@@ -61,6 +69,9 @@ public class Basicsll {
         // }
         //or 
         printUsRec(a);
-        System.out.println("\nLeagth :"+length(a));
+        // System.out.println("\nLeagth :"+length(a));
+        
+        insertAtEnd(a, 87);
+        printNode(a);
     }
 }

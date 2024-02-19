@@ -19,7 +19,7 @@ public class reverseLinkedList {
         return pre;
     }
     public static Node reverse(Node head){
-        if(head.next==null){
+        if(head.next==null){ 
             return head;
         }
         Node newHead = reverse(head.next);

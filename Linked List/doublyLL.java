@@ -107,13 +107,48 @@ public class doublyLL {
         return head;
 
     }
+    public static boolean palindrome(Node head){
+        Node temp = head;
+        while(temp.next!=null){
+            temp = temp.next;
+        }
+        Node h = head;
+        Node t = temp;
+        while(h!=t){
+            if(h.data!=t.data){
+                return false;
+            }
+            h = h.next;
+            t = t.prev;
+        }
+        return true;
+    }
+    public static int TwoSumDLL(Node head, int target){
+        Node tail = head;
+        while(tail.next!=null){
+            tail = tail.next;
+        }
+        Node h = head;
+        Node t = tail;
+        while(h.data < t.data){
+            if (h.data + t.data == target){
+                System.out.print(h.data+ "+"+ t.data + "=");
+                break;
+            } else if (h.data + t.data > target){
+                t = t.prev;
+            } else {
+                h = h.next;
+            }
+        }
+        return target;
+    }
     public static void main(String[] args) {
         // 4 10 2 99 13
-        Node a = new Node(7);
-        Node b = new Node(4);
-        Node c = new Node(6);
-        Node d = new Node(8);
-        Node e = new Node(9);
+        Node a = new Node(1);
+        Node b = new Node(3);
+        Node c = new Node(4);
+        Node d = new Node(6);
+        Node e = new Node(8);
         a.prev = null;
         a.next = b;
         b.prev = a;
@@ -125,24 +160,9 @@ public class doublyLL {
         e.prev = d;
         e.next = null;
         display(a);
-        Node h = deleteAtIdx(a, 1);
-        display(h);
-        // Node h = deleteTail(a);
-        // display(h);
-        // deleteTail2(e);
-        // display(a);
-        // deleteAtIdx(a, 3);
-        // display(a);
-        // insertAtIdx(a, 3, 10);
-        // display(a);
-        // Node ab = deleteHead(a);
-        // display(ab);
-        // displayRev(e);
-        // display2(c);
-        // reverse(a);
-        // Node newHead = insertAtHead(a, 35);
-        // display(newHead);
-
+        System.out.println(TwoSumDLL(a, 11));
+        
+        
     
     }
 }

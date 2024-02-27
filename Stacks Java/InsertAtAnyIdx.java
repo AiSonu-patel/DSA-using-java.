@@ -21,5 +21,6 @@ public class InsertAtAnyIdx {
             st.push(temp.pop());
         }
         System.out.println(st);
+
        }
 }

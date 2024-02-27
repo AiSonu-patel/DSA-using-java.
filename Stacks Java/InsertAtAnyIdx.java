@@ -1,5 +1,4 @@
 import java.util.Stack;
-
 public class InsertAtAnyIdx {
     public static void main(String[] args) {
         Stack<Integer> st = new Stack<>();
@@ -21,6 +20,5 @@ public class InsertAtAnyIdx {
             st.push(temp.pop());
         }
         System.out.println(st);
-
        }
 }

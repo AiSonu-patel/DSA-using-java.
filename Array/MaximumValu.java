@@ -1,4 +1,5 @@
-class ArrayExample {
+class ArrayExample{
+    
     void maxValu() {
         int[] arr = { 1, 4, 8, 10, 8, 9 };
         int ans = 0;
